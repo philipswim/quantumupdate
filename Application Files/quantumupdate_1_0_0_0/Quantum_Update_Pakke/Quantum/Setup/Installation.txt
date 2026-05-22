@@ -1,0 +1,573 @@
+SWISS TIMING
+
+==============================  NEW INSTALLATION  ==========================================
+
+1) If not yet installed, install MICROSOFT .NET FRAMEWORK 4.8
+2) If not yet installed, install MICROSOFT vc_redist.x64.exe for vs2019
+3) INSTALL DRC Framework 6.1.xxx
+4) INSTALL Quantum Swimming  Application.
+5) INSTALL QUANTUM USB Driver.
+
+
+
+==============  UPGRADING FROM A PREVIOUS INSTALLATION =====================================
+From Control Panel, uninstall previous version:
+	1) Uninstall Previous Quantum Sports Application
+	2) Uninstall Previous DRC
+Then reinstall from the CD.
+
+================ Quantum Swimming Application From Rev 6.1.9 To 6.1.10 Feb 11 2022 ===================================================
+(QuantumSwimming  6.1.22042.0.msi)
+ATTENTION:
+	USE DRC 64 bits:   Installer 6.1.XXXXX.X or later
+	USE OF MICROSOFT .NET4.8
+
+Application Changes:
+^^^^^^^^^^^^^^^^^^^^
+	IO DH Splash TCP: fixed Lap+1 when lane is not armed.
+	After restart race, B1,B2 and B3 did not register properly.
+
+
+================ Quantum Swimming Application From Rev 5.2.7 To 6.1.9 Nov 25 2021 ===================================================
+(QuantumSwimming  6.1.21329.0.msi)
+ATTENTION:
+	USE DRC 64 bits:   Installer 6.1.XXXXX.X or later
+	USE OF MICROSOFT .NET4.8
+
+Application Changes:
+^^^^^^^^^^^^^^^^^^^^
+	IO DH Splash TCP: fixed records import, fixed large meet import.
+	IO SCB ALPHA: Added field {9} for lap, in Race mask. 
+
+
+================ Quantum Swimming Application From Rev 5.2.7 To 5.2.8 Jul 24 2021 ===================================================
+(QuantumSwimming  5.2.21205.0.msi)
+USE DRC 64 bits:   Installer 5.2.20XXX.X or later
+
+Application Changes:
+^^^^^^^^^^^^^^^^^^^^
+	IO SITB: fixed Summary empty names when DNF, DNS...
+
+
+================ Quantum Swimming Application From Rev 5.2.6 To 5.2.7 June 01 2021 ===================================================
+USE DRC 64 bits:   Installer 5.2.20XXX.X or later
+
+Application Changes:
+^^^^^^^^^^^^^^^^^^^^
+	IO OSM6: fixed message reaction time for "resend results"
+
+
+
+
+================ Quantum Swimming Application From Rev 5.2.5 To 5.2.6 March 11 2021 ===================================================
+USE DRC 64 bits:   Installer 5.2.20XXX.X or later
+
+Application Changes:
+^^^^^^^^^^^^^^^^^^^^
+	IO SITB: Added message PoolTest
+	IO SplachTCP: Fixed error when importing startlists for Whole meet
+	IO Hy-Tek: Added option to add an empty field in .qaq file.
+
+
+================ Quantum Swimming Application From Rev 5.2.4 To 5.2.5 Jan 28 2021 ===================================================
+USE DRC 64 bits:   Installer 5.2.20XXX.X or later
+
+Application Changes:
+^^^^^^^^^^^^^^^^^^^^
+	IO SITB: Added field "Note" in Lane structure to display new Record.
+	Sounds : fixed some delayed on not comming touch sounds.
+
+================ Quantum Swimming Application From Rev 5.2.3 To 5.2.4 Dec 17 2020 ===================================================
+USE DRC 64 bits:   Installer 5.2.20XXX.X or later
+
+Application Changes:
+^^^^^^^^^^^^^^^^^^^^
+	IO DH_SplashTCP: New network communication for splash meet manager (Splash TCP)
+	
+Language files modified texts:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IOSetupListOfIOsDisplayed = #SCB Calypso|SCB SwissTiming Alpha|SCB ERTD|DH LST Files|DH OSM6|DH Splash|DH Splash TCP|DH Hytek|SCB Finish Light|SCB Sport In The Box
+IOSetupListOfIOsIDs = #IDSCBNumeric|IDSCBAlphanumeric|IDSCBErtd|IDDHLSTFiles|IDDHOSM6|IDDHSplash|IDDHSplashTCP|IDDHHytek|IDSCBFinishLight|IDSCBSITB
+
+
+
+================ Quantum Swimming Application From Rev 5.2.2 To 5.2.3 Nov 09 2020 ===================================================
+USE DRC 64 bits:   Installer 5.2.20XXX.X or later
+
+Application Changes:
+^^^^^^^^^^^^^^^^^^^^
+	IO DH_Hytek: fix .qaq file (removed empty field after rank)
+	IO DH LSTFiles: clear LSTRslt.txt when creating a new meet.
+
+================ Quantum Swimming Application From Rev 5.1.4 To 5.2.0 May 28 2020 ===================================================
+USE DRC 64 bits:   Installer 5.2.20XXX.X or later
+
+Application Changes:
+^^^^^^^^^^^^^^^^^^^^
+	SITB IO: New scoreboard output for Sport In the Box.
+	Print on PC: Do not print times for DSQ lanes.
+	Added LSTStatus.en-UK file to customize Status Displayed Text.
+	USB Dongle not required.
+	Corrected Edit Time with different precision.
+	Hytek import records : Ignore records with time = "NT"
+	
+Language files modified texts:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IOParams_SITB_EnableKeepAlive_C	3:Options
+IOParams_SITB_EnableKeepAlive_D	Enable periodic keep alive message
+IOParams_SITB_EnableKeepAlive_N	a:Enable keep alive
+IOParams_SITB_EnableRunningTime_N	a:Enable
+IOParams_SITB_EnableRunningTimeX_D	Enable the running time
+IOParams_SITB_Paging_C	3:Options	
+IOParams_SITB_Paging_HoldResults_D	Select how long the results should stay after the start of the next race\n0: Follow to the next race. -1: No action
+IOParams_SITB_Paging_HoldResults_N	c:Results Hold Time (in s.)
+IOParams_SITB_RTModeList	#Leader Finishes|Last arrival|Leaving the race
+IOParams_SITB_RunningTime_C	2:Running Time Settings
+IOParams_SITB_RunningTimeHold_D	Select how long the running time should stop after a turn.
+IOParams_SITB_RunningTimeHold_N	b:Hold time (in sec)
+IOParams_SITB_RunningTimePosX_D	Select when the running time will stop
+IOParams_SITB_RunningTimePosX_N	c:Stop mode	
+IOParams_SITB_SerialPort_C	1:TCP Port
+IOParams_SITB_Settings_D	Enter port to listen to. ie: 26700
+IOParams_SITB_Settings_N	b:Settings
+IOParams_SITB_SummaryMode_D	Select how the summary should end.\n
+IOParams_SITB_SummaryMode_N	d:Summary rolling mode
+IOParams_SITB_SummaryNbOfLinesPerPage_D	Number of lines per page for summary (0 for send all).\n
+IOParams_SITB_SummaryNbOfLinesPerPage_N	f:Nb of Lines/Page for summary
+IOParams_SITB_SummaryPaging_C	3:Options	
+IOParams_SITB_SummaryPaging_HoldTime_D	Select how long a summary page should stay before going to the next
+IOParams_SITB_SummaryPaging_HoldTime_N	e:Summary Page Hold Time (in s.)
+IOParams_SITB_SwitchToResult_D	Switch to Results mode when official is pressed.\n
+IOParams_SITB_SwitchToResult_N	b:Auto Switch to Results
+IOParams_SITB_Test_C	6:Tests
+IOParams_SITB_Test_D	Start a test Pattern. \nThe scoreboard must be activated
+IOParams_SITB_Test_N	a:Test Command
+IOSetupListOfIOsIDs	#IDSCBNumeric|IDSCBAlphanumeric|IDSCBErtd|IDDHLSTFiles|IDDHOSM6|IDDHSplash|IDDHHytek|IDSCBFinishLight|IDSCBSITB
+IOSetupListOfIOsDisplayed	#SCB Calypso|SCB SwissTiming Alpha|SCB ERTD|DH LST Files|DH OSM6|DH Splash|DH Hytek|SCB Finish Light|SCB Sport In The Box
+
+New shortcuts for Keyb.xxx FILES:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IOSCB_SITB_1              ;* ;ShortCutsCommand:Off     ;HOME    ;CTRL                     ;"[Ctrl Home]              ";SCBSITB_Menu_Off               ;;
+IOSCB_SITB_1              ;* ;ShortCutsCommand:On      ;INSERT  ;CTRL                     ;"[Ctrl Insert]            ";SCBSITB_Menu_On				            ;;
+IOSCB_SITB_1             ;* ;ShortCutsCommand:SendResults;PAGEUP  ;CTRL                     ;"[Ctrl PageUp]            ";SCBSITB_Menu_Results           ;;
+IOSCB_SITB_2              ;* ;ShortCutsCommand:Off     ;HOME    ;CTRL                     ;"[Ctrl Home]              ";SCBSITB_Menu_Off               ;;
+IOSCB_SITB_2              ;* ;ShortCutsCommand:On      ;INSERT  ;CTRL                     ;"[Ctrl Insert]            ";SCBSITB_Menu_On				            ;;
+IOSCB_SITB_2             ;* ;ShortCutsCommand:SendResults;PAGEUP  ;CTRL                     ;"[Ctrl PageUp]            ";SCBSITB_Menu_Results           ;;
+IOSCB_SITB_3              ;* ;ShortCutsCommand:Off     ;HOME    ;CTRL                     ;"[Ctrl Home]              ";SCBSITB_Menu_Off               ;;
+IOSCB_SITB_3              ;* ;ShortCutsCommand:On      ;INSERT  ;CTRL                     ;"[Ctrl Insert]            ";SCBSITB_Menu_On				            ;;
+IOSCB_SITB_3             ;* ;ShortCutsCommand:SendResults;PAGEUP  ;CTRL                     ;"[Ctrl PageUp]            ";SCBSITB_Menu_Results           ;;
+IOSCB_SITB_4              ;* ;ShortCutsCommand:Off     ;HOME    ;CTRL                     ;"[Ctrl Home]              ";SCBSITB_Menu_Off               ;;
+IOSCB_SITB_4              ;* ;ShortCutsCommand:On      ;INSERT  ;CTRL                     ;"[Ctrl Insert]            ";SCBSITB_Menu_On				            ;;
+IOSCB_SITB_4             ;* ;ShortCutsCommand:SendResults;PAGEUP  ;CTRL                     ;"[Ctrl PageUp]            ";SCBSITB_Menu_Results           ;;
+IOSCB_SITB_5              ;* ;ShortCutsCommand:Off     ;HOME    ;CTRL                     ;"[Ctrl Home]              ";SCBSITB_Menu_Off               ;;
+IOSCB_SITB_5              ;* ;ShortCutsCommand:On      ;INSERT  ;CTRL                     ;"[Ctrl Insert]            ";SCBSITB_Menu_On				            ;;
+IOSCB_SITB_5             ;* ;ShortCutsCommand:SendResults;PAGEUP  ;CTRL                     ;"[Ctrl PageUp]            ";SCBSITB_Menu_Results           ;;
+IOSCB_SITB_6              ;* ;ShortCutsCommand:Off     ;HOME    ;CTRL                     ;"[Ctrl Home]              ";SCBSITB_Menu_Off               ;;
+IOSCB_SITB_6              ;* ;ShortCutsCommand:On      ;INSERT  ;CTRL                     ;"[Ctrl Insert]            ";SCBSITB_Menu_On				            ;;
+IOSCB_SITB_6             ;* ;ShortCutsCommand:SendResults;PAGEUP  ;CTRL                     ;"[Ctrl PageUp]            ";SCBSITB_Menu_Results           ;;
+
+================ Quantum Swimming Application From Rev 5.1.3 To 5.1.4 April 02 2019 ===================================================
+	USE DRC 64 bits:   Installer 5.1.18309.2 or later
+	On PCs, you may have to install .NET Framework 4.7.2 / VC_Redist 14.11.25325
+
+	
+Application Changes:
+^^^^^^^^^^^^^^^^^^^^
+	DH Splash : Accept handicap attribut for lanes.
+	Database: Name lenght is not limited to 26 chars. All the strings have a dynamic length
+	
+
+Language files modified texts:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+================ Quantum Swimming Application From Rev 5.0.2 To 5.1.3 November 16 2018 ===================================================
+	USE DRC 64 bits:   Installer 5.1.18309.2 or later
+	On PCs, you may have to install .NET Framework 4.7.2 / VC_Redist 14.11.25325
+
+	
+Application Changes:
+^^^^^^^^^^^^^^^^^^^^
+	RACE : Reaction times in water did not work properly when false start (arm start) was done immediately after the start.
+	Configuration: Added tabs for Global timing parameters. Global timing parameters are those used when creating a new meet.
+	Start: enable the use of different start polarity on input Start1 and Start2. Warning: Starts OUT will be Normally Closed if either Start1 or Start2 is NC.
+
+Language files modified texts:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+================ Quantum Swimming Application From Rev 5.0.1 To 5.0.2 Sept 28 2018 ===================================================
+	
+Application Changes:
+^^^^^^^^^^^^^^^^^^^^
+	RACE : Reaction times did not work properly when the pool configuration has only a single harness (like in short course meet)
+	SPLASH IO: When importing special relays races (like 10x50m) the text for the race distance was incorect.
+
+
+Language files modified texts:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+================ Quantum Swimming Application From Rev 5.0.0 To 5.0.1 August 16 2018 ===================================================
+ATTENTION:
+^^^^^^^^^^
+	USE DRC 64 bits:   Installer 5.0.18109.1 or later
+	On PCs, you may have to install .NET Framework 4.7.1 / VC_Redist 14.11.25325
+	
+Application Changes:
+^^^^^^^^^^^^^^^^^^^^
+	ERTD SCB: Default message for frame select PROT_ERTD_FrameSelect changed to [SYN]00000000[SOH]00301{0}[EOT]
+	Installer: Sample DB is installed in the correct folder %StDrcData64%\Quantum\Swimming\Data\SampleDB
+
+
+Language files modified texts:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+================ Quantum Swimming Application From Rev 1.8.3 To 5.0.0 June 2018 ===================================================
+ATTENTION:
+^^^^^^^^^^
+	USE DRC 64 bits:   Installer 5.0.18109.1 or later
+	On PCs, you may have to install .NET Framework 4.7.1 / VC_Redist 14.11.25325
+	
+Application Changes:
+^^^^^^^^^^^^^^^^^^^^
+	PRINT and OSM6 : corrected error when we had more than one backup time.
+	Races 150m race and one harness connected: corrected lap counter.
+	Splash : Round Names are no longer erase after requesting startlists.
+	IOs: Added one IO : we can have up to 6 IOs.
+	IOs: Keyboards shortcuts work when we have more than 1 SCB of the same type. (new Keyboard definition files in folder Keyb)
+	Added Handicap for Lanes or Competitor
+		- Lane Handicap is imported from LstStart.txt
+		- Competitor Handicap is imported from LstConc.txt
+	Added Handicap field on SCB_ALPHA Scoreboards.
+
+
+
+Language files modified texts:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IOParams_Alpha_FormatLanePres_D = {0} Lane, {1} Name, {2} Country, {4} Club,{5} Handicap.\n{0:L2} {1} {2}
+IOParams_Alpha_FormatTeamPres_D = {0} Lane, {1} TeamName, {2} Country, {3} Club,{4} Handicap.\n{0:L2} {1}
+IOParams_Alpha_FormatTeamSwimmerPres_D = {0} Lane, {1} Name, {2} Country {3} Club,{4} Handicap.\n{1}
+IOParams_Alpha_FormatPodium_D = {0} Rank, {1} Name, {2} Country, {3} Time, {4}Club,{5} Handicap.\n{0} {1:L16} {2:L4} {3:R8}
+IOParams_Alpha_MaskStart_D = Use {0}:Rank, {1}:Name, {2}:Country, {3}Time,{4}Lane,{7}Club,{8} Handicap.\n{4:L2} {1:L16} {2:L4}
+IOParams_Alpha_MaskRace_D = Use {0}:Rank, {1}:Name, {2}:Country, {3}Time,{4}Lane, {6}Laptime,{7}Club,{8} Handicap.\n{4:L2} {1:L16} {2:L4} {3:R8} {0:L2}
+IOParams_Alpha_MaskResult_D = Use {0}:Rank, {1}:Name, {2}:Country, {3}Time,{4}Lane,{5}Record indicator,{6}Laptime,{7}Club,{8} Handicap.\n{0:L2} {1:L16} {2:L4} {3:R8} {4:L2}
+IOParams_Alpha_MaskSummary_D = Use {0}:Rank, {1}:Name, {2}:Country, {3}Time,{4}Lane,{5}Record indicator,{7}Club,{8} Handicap.\n{0:L2} {1:L16} {2:L4} {3:R8}
+
+================ Quantum Swimming Application From Rev 1.8.2 To 1.8.3 March 2018 ===================================================
+USE DRC 2.8.18026 or later
+SCB Calypso:
+	- On Results: title line is not cleared when using 8 lines
+
+================ Quantum Swimming Application From Rev 1.8.1 To 1.8.2 March 2018 ===================================================
+USE DRC 2.8.18026 or later
+Pool configuration is restored by default when creating a new Meet.
+
+
+================ Quantum Swimming Application From Rev 1.8.0 To 1.8.1 Sept 2017 ===================================================
+Added a "Generate log file backup" option.
+
+================ Quantum Swimming Application From Rev 1.7.1 To 1.8.0 Aug 2017 ===================================================
+USE DRC 2.8.2
+
+Version for compatibility with .NET 4.7.0 (by default on W Creator edition)
+
+================ Quantum Swimming Application From Rev 1.7.0 To 1.7.1 Jan 2017 ===================================================
+SCB ERTD:
+	Added Option for UNICODE Mode: message 012 with UTF16 information.
+	
+
+================ Quantum Swimming Application From Rev 1.6.14 To 1.7.0 Jan 2017 ===================================================
+
+SCB Alpha /ERTD:
+	Corrected DayTime Format.
+DH LstFiles:
+	Official races are not deleted any more during "Refresh Startlist"
+Race:
+	When using only buttons, take only the 1st button touch
+
+
+================ Quantum Swimming Application From Rev 1.6.13 To 1.6.14 Jan 2016 ===================================================
+
+USE DRC 2.7.28
+USE .NET 4.6.1 (Included in Windows 10)
+
+
+SCB Calypso:
+	Corrected problem with results after new installation.
+	
+SERIAL Printer:
+	Autoprint on Official is active when Enabled is off. (Prints only the results, but not all the splits).
+	
+================ Quantum Swimming Application From Rev 1.6.12 To 1.6.13 Jan 2016 ===================================================
+USE DRC 2.4.38
+SCB Calypso:
+	Code page 1252 (see also advanced settings : CodePage)
+SCB Alpha:
+	Corrected DayTime.
+	
+Installer: added German keyboard file and updated german language file	
+
+
+================ Quantum Swimming Application From Rev 1.6.11 To 1.6.12 Jan 2016 ===================================================
+USE DRC 2.4.38
+SCB Calypso:
+	Correction refresh on Lap-1
+	Correction Blank page on Display results with Name.
+	Correction message: 1 space too many in send results.
+SCB Alpha:
+	New fields for Club name.
+DH Splash:
+	Correction double negativ sign on reaction times.
+	Import relay team without any swimmer.
+DH Hytek:
+	Correction of deleted results when importing starlist.
+DH LSTFile:
+	In LSTConc.txt, a new field "Club name" can be added at the end of each line 
+	Other:
+	Correction of Ready Led initialization.
+	
+Language files modified texts:
+IOParams_Alpha_FormatLanePres_D = {0} Lane, {1} Name, {2} Country {3} Club.\n{0:L2} {1} {2}
+IOParams_Alpha_FormatTeamPres_D = {0} Lane, {1} TeamName, {2} Country, {3} Club.\n{0:L2} {1}
+IOParams_Alpha_FormatTeamSwimmerPres_D = {1} Lane, {1} Name, {2} Country {3} Club.\n{1}
+IOParams_Alpha_FormatPodium_D = {0} Rank, {1} Name, {2} Country, {3} Time, {4}Club.\n{0} {1:L16} {2:L4} {3:R8}
+IOParams_Alpha_MaskStart_D = Use {0}:Rank, {1}:Name, {2}:Country, {3}Time,{4}Lane,{7}Club.\n{4:L2} {1:L16} {2:L4}
+IOParams_Alpha_MaskRace_D = Use {0}:Rank, {1}:Name, {2}:Country, {3}Time,{4}Lane, {6}Laptime,{7}Club.\n{4:L2} {1:L16} {2:L4} {3:R8} {0:L2}
+IOParams_Alpha_MaskResult_D = Use {0}:Rank, {1}:Name, {2}:Country, {3}Time,{4}Lane,{5}Record indicator,{6}Laptime,{7}Club.\n{0:L2} {1:L16} {2:L4} {3:R8} {4:L2}
+IOParams_Alpha_MaskSummary_D = Use {0}:Rank, {1}:Name, {2}:Country, {3}Time,{4}Lane,{5}Record indicator,{7}Club.\n{0:L2} {1:L16} {2:L4} {3:R8}
+
+
+================ Quantum Swimming Application From Rev 1.6.10 To 1.6.11 Nov 2015 ===================================================
+Correction of Synchronization when working with AQ-FPGAn version 6
+SCB_Calypso:
+	- Correction of names in start list for relay races: the team name is sent.
+Arming delay when passing through midnight corrected.
+Inserting competitor in start list corrected.
+
+
+================ Quantum Swimming Application From Rev 1.6.9 To 1.6.10 Sept 2015 ===================================================
+USE DRC 2.4.38
+SCB_ALPHA (and ERTD)
+	- Lane presentation: there was an error when a lane was empty.
+	
+SCB_Calypso:
+	- Correction of names in results for relay races: the team name is sent.
+	- Correction of names in results when scrolling was required.
+	- Record on 2nd text line corrected.
+	- Text line on 17 chars
+	
+TimeTable:
+	- We can now import the results from heats in a previous meet:useful for Timed Finals
+
+Pool Configuration:
+	- Save as Default corrected.
+	
+Language files:
+New texts:
+AdditionalInformation_AutoRec_TX = Auto refresh Records \n and Event heat
+AdditionalInformation_Counter1_TX = Team Points
+AdditionalInformation_Counter2_TX = Men Points
+AdditionalInformation_Counter3_TX = Women Points
+AdditionalInformation_Counter4_TX = Points
+AdditionalInformation_Event_TX = Event
+AdditionalInformation_Heat_TX = Heat
+AdditionalInformation_Record_TX = Record
+AdditionalInformation_Send_PB = _Send
+AdditionalInformation_Title_TX = Additional Information
+Calypso_Menu_AdditionalInfo = Additional information
+EventsView_Refresh_PB = Refresh
+EventsView_Reset_PB = Reset
+IOParams_Alpha_ShowRecordSplits_D = Show the records splits and delta.\nOnly for the 1st record.
+IOParams_Alpha_ShowRecordSplits_N = h:Show Records split
+IOParams_Calypso_EnableAdditional_D = Allow to edit a points counter, record information and Event / heat.
+IOParams_Calypso_EnableAdditional_N = i:Enable additional information
+IOParams_Hytek_Dataset_D = Enter the dataset number for Hy-Tek Meet Manager\nThis is a number between 1 and 999.
+IOParams_Hytek_Dataset_N = b:Dataset number
+RecordOutput_Menu_Blank = Blank
+RecordOutput_Menu_Off = Off
+RecordOutput_Menu_On = On
+RecordOutput_Menu_Refresh = Refresh
+TimeTableView_ImportRaceResults_MN = "Import heats results from a previous meet"
+
+	
+	
+================ Quantum Swimming Application From Rev 1.6.8 To 1.6.9 Mar 2015 ===================================================
+USE DRC 2.4.22
+SCB_ALPHA (and ERTD)
+	Correction of running time erasing 1st line of result.
+	Correction of relay team names in lane presentation for relay.
+DH_Hytek:
+	Correction of negativ times in relay take over.
+	Import of record from Quantum.rec file. (requires HT Swimm 6.0)
+Display:
+	Correction of lane order in start list when lanes are inverted in pool configuration.
+	
+SCB_Calypso:
+	Additionnal information line 11 and 12:(Points scores and record, event,heat)
+		EnableHomeGuestCounter=True in Calypso Advanced view settings
+	Hidden message to send Buttons times.
+		ButtonTimeEnable=True in Calypso Advanced view settings
+
+================ Quantum Swimming Application From Rev 1.6.7 To 1.6.8 Dec 2014 ===================================================
+USE DRC2.4.12
+SCB_ALPHA (and ERTD)
+	Correction in Names abreviations for Podium and Lane presentations
+	Clear the rank on scoreboard after an Arm Start (false start)
+	Restart running after a Continue Race.
+	Field{}
+DH Splash:
+	Option to use the code name instead of club name
+DH Hytek:
+	Option to import only a heat, a race or the whole meet.
+Timing:
+	Quick "Take Backup Time" Button appears in a lane when we have a backup time but no touchpad.
+
+Language files:
+New texts:
+IOSetupDHHytekDashBoard_RefreshStartListRace = Refresh StartList Selected Race
+IOSetupDHHytekDashBoard_RefreshStartListMeet = Refresh StartList Whole Meet
+IOParams_Alpha_ShowRecordSplits_D = Show the records splits and delta.\nOnly for the 1st record.
+IOParams_Alpha_ShowRecordSplits_N = h:Show Records split
+
+
+Modified texts:
+IOSetupDHHytekDashBoard_RefreshStartList = Refresh StartList Selected Heat
+IOParams_Alpha_MaskRace_D = Use {0}:Rank, {1}:Name, {2}:Country, {3}Time,{4}Lane, {6}Laptime.\n{4:L2} {1:L16} {2:L4} {3:R8} {0:L2}
+IOParams_Alpha_MaskResult_D = Use {0}:Rank, {1}:Name, {2}:Country, {3}Time,{4}Lane,{5}Record indicator,{6}Laptime.\n{0:L2} {1:L16} {2:L4} {3:R8} {4:L2}
+
+
+
+================ Quantum Swimming Application From Rev 1.6.6 To 1.6.7 ===================================================
+USE DRC2.4.4
+SCB_ALPHA (and ERTD)
+	Correction potential error in UTF8 character.
+	Record information and lane arming correction
+	Indication of beaten record on result line (new field in the line settings)
+	Option to switch to race mode when we change race
+	Option to override default IO Setting for race title (in Race Edit)
+
+Print a startlist
+Option to import competitor list from previous meet when we create a new meet.
+Sound file names can be changed in advanced settings
+DH SPLAST: Also sends button times on splits
+DH Lst Files: Option to remove empty heats
+
+Settings->Table->Record: Easier record edition
+
+
+Language files:
+New texts:
+AddRaceWnd_TitleForSCB_TX = Use this only to override the IO settings for the scoreboard
+
+Modified texts:
+IOParams_Alpha_MaskResult_D = Use {0}:Rank, {1}:Name, {2}:Country, {3}Time,{4}Lane,{5}Record indicator.\n{0:L2} {1:L16} {2:L4} {3:R8} {4:L2}
+IOParams_Alpha_MaskSummary_D = Use {0}:Rank, {1}:Name, {2}:Country, {3}Time,{4}Lane,{5}Record indicator.\n{0:L2} {1:L16} {2:L4} {3:R8}                                                                  
+IOParams_Alpha_Paging_HoldResults_D = Select how long the results should stay after the start of the next race\n0: Follow to the next race. -1: No action"
+IOParams_Calypso_Paging_HoldResults_D = Select how long the results should stay after the start of the next race\n0: Follow to the next race. -1: No action"
+
+
+================ Quantum Swimming Application From Rev 1.6.5 To 1.6.6 ===================================================
+SCB ALPHA (and ertd): 
+	Podium based on summary (check box in the popup window)
+	Correction in lane presentation for team.
+	and some other small corrections...
+DH OSM6:
+	Backup are now sent on Send results.
+	Sends also DNS and DSQ
+
+Print of race summaries on PC Printer.
+
+
+Language files:
+New texts:
+	EditRecords_ShowOnlyCurrentRaceCB = Show only current race records
+	LapsTimingView_Pring_POP = Print current heat\nUse Ctrl to print summary.
+	
+================ Quantum Swimming Application From Rev 1.6.4 To 1.6.5 ===================================================
+USE DRC 2.2
+SCB ALPHA (and ertd): 
+	Correction with DNS swimmers.
+	When the running hold time is set to 0, then the RT is not stopped until the last swimmer has arrived.
+	the lap distance can be displayed on the second title line with the split record
+	
+In Timing View, we can do a manual touch with the click of a mouse (and Ctrl+Shift)
+
+================ Quantum Swimming Application From Rev 1.6.0 To 1.6.5 ===================================================
+SCB ALPHA (and ertd): 
+	Option to display Record split times in title line
+	Option to leave the clock running until the last arrival.
+	Corrections: DNS, Relay..., lap not cleared
+	Backup time for split not sent on SCB anymore.
+
+DH Splash:
+	Improved stability.
+	Correction in team imports.
+
+DH Hytek:
+	Small corrections (refresh startlists..)
+
+
+Timing:
+	Test Pool: sends the start to the scoreboard.
+	Test Pool: new sound file for lane 0,11,12
+	Manual touches with the click of the mouse (with Ctrl-Shift)
+	Nettimes hold duration separated from scb nettimes.
+	Correction in Edit Startlist.
+	Correction in print preview.
+	Added a warning when a race is not finished.
+	
+		
+================ From Rev 1.0.6 To 1.6.0 ===================================================
+SCB ALPHA (and ertd): 
+	No time was sent after "Take backup time"
+	Team nation on scoreboard.
+	Running time starts when we do an Attrib last start.
+	In relay races, display team name when no swimmer are available.
+	Test Pool : sends the Lane nb and contact type.
+	Summary page: Correction of rank when there is a tie.
+
+DH Hytek:
+	Improved speed on import	
+	Now we can refresh the startlist when a race is online.	
+
+DH TEXT FILES:
+	Improved speed on import
+
+Timing:
+	Start in Water: Automatic and checkbox settings corrected.
+
+
+================ From Rev 1.0.5 To 1.0.6 ===================================================
+SCB ALPHA (and ertd): 
+	Corrected Lane presentation. Lane was not always sent. (the was a mix up with FormatPodium)
+	Corrected the Send Last Lap Error message when the previous lap was missing.
+Timing:
+	Corrected the "Arm touchpad could be rearmed manually after finish".
+	
+
+================ From Rev 1.0.4 To 1.0.5 ===================================================
+SCB ALPHA (and ertd): 
+	Added records on Title line 2
+	Added Podium and Lane presentation function
+DH SPLASH:
+	Corrected bugs (empty heat, name prefix, time format)
+	Accept records when Mmgr pushes the schedule
+DH Hytek :
+	Corrected bugs
+	Added Import Schedule in DashBoard button.
+	
+	
+================  TROUBLESHOOTING THE USB CONNECTION =======================================
+
+Only if your system does not discover properly the Quatum virtual com ports
+
+
+UPDATE OF THE USB CONNECTION: 
+=============================
+From the CD-ROM , Launch the QAQ_USB_UPDATE\QAQ_USBUpdate.exe to update 
+the Quantum USB SETTING AND THE DRIVERS...
+
+Follow the explanations in the application.
+	
