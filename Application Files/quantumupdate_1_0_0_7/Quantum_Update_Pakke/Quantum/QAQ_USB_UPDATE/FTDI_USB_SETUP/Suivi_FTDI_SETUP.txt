@@ -1,0 +1,8 @@
+2012-10-26		Correction of XML templates 
+				Attributes VCP changed name from version FT_Prog 1.12 WAS <Virtual_Com_Port> now is <VCP>
+				SelfPowered is now true.
+2012-09-19		Batch and Templates for Quantum 64IO
+2012-06-20		Use FT_Prog 2.6.8
+
+
+

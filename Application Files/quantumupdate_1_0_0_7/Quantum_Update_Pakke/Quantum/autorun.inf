@@ -1,0 +1,215 @@
+[Autorun]
+OPEN=INTRO.EXE
+ICON=setup\AUTORUN.ICO
+
+[Product]
+;****************************
+;Products=the number of buttons choices including the Exit option
+;Title=the Caption for the Intro window
+;RegistryKey=used by our autorun.exe, if the key is set it will not launch the intro.exe
+;            the intro is called via the 'SetupProgram' key below
+;WaveFile=the path to a wav file that the intro will play (if located)
+;AutorunProgram=relative path to the exe the autorun will launch(usually launches the intro.exe)
+;LabelFont=Font used for text or label of each Button or Choice
+;TextFont=Font used for error or description text (Typically displayed at the bottom)
+;Charset=the charset used for the text used in the intro
+;TextHeight=the point size of the fonts used for the 'Label' and 'Text' respectively
+;LabelUnSelectedTextColor=RGB color of button text when not selected or highlighted
+;LabelSelectedTextColor=RGB color of button text when selected or highlighted
+;DescriptionTextColor=RGB color of the description text
+;ErrorTextColor=RGB color of the error text
+;CloseOnLaunch=if set to YES we will close the intro.exe upon successful launch of any of the choices
+;CommonRect=the coordinates of rect used to display errors and discriptions (when button is highligted)
+;           top* bottom* left* right 
+;*****************************
+Products = 11
+Title = %QAQTitle.Text%
+RegistryKey =
+WaveFile = setup\Click.wav
+JumpWaveFile = setup\Click.wav
+AutorunProgram = intro.exe
+LabelFont = Calibri
+LabelFontWeight = REGULAR
+LabelFontItalic = 0
+LabelFontUnderline = 0
+TextFont = Calibri
+TextFontWeight = REGULAR
+TextFontItalic = 0
+TextFontUnderline = 0
+Charset = 1
+TextHeight = 20*17
+DescriptionTextHeight = 20*17
+LabelUnSelectedTextColor=0*0*0
+LabelSelectedTextColor=255*0*0
+DescriptionTextColor=255*0*0
+;ErrorTextColor=255*162*1
+ErrorTextColor=255*162*1	
+CloseOnLaunch = NO
+;CommonRect = 115*259*200*457  (y,x,y1,x1)
+CommonRect = 600*630*371*771
+
+;**************************************
+;SetupLabel=The Text Displayed for this choice
+;LabelRectValue=the coordinates of the rect where this text will be placed on the background
+;                 Top* Bottom* Left* Right
+;SetupProgram=relative path to the program to launch when this choice is selected. Followed by our separator and
+;              the command line arguments if any for the program, followed by the separartor and winexec if the program is
+;               16 bit i.e.  setup.exe*/SetFile=<S>\autorun\bai7us.set*winexec
+;TestFile=relative path to another file that must exist before we will attempt to launch the
+;          'SetupProgram'
+;SetupWindow=The window name of the program launched by the 'SetupProgram', we will check for this
+;             being active and set focus to this window rather than launch a second instance of
+;             'SetupProgram'
+;Description=The discription of this button displayed when a user highlights (move the mouse
+;             over) this button
+;ErrorText=the error text displayed if the the 'SetupProgram" cannot be launched when the button is selected
+;
+;**************************************
+
+[Button0]
+SetupLabel = %B0SetupLabel.Text%
+LabelRectValue = 220*250*561*961
+SetupProgram = \Setup\Installation.txt**
+SetupWindow = Help topic : QUANTUM Softwares Installation instructions
+TestFile = \Setup\Installation.txt
+Description = %B0Description.Text%
+ErrorText = %B0Error.Text%
+
+[Button1]
+SetupLabel = %B1SetupLabel.Text%
+LabelRectValue = 250*280*542*942
+SetupProgram = \Microsoft\ndp48-x86-x64-allos-enu.exe**
+SetupWindow = Microsoft .NET 4.8 Framework
+TestFile = \Microsoft\ndp48-x86-x64-allos-enu.exe
+Description = %B1Description.Text%
+ErrorText = %B1Error.Text%
+
+[Button2]
+SetupLabel = %B2SetupLabel.Text%
+LabelRectValue = 280*310*523*923
+SetupProgram = \Microsoft\VC_redist.x64_2015_2022.exe**
+SetupWindow = Microsoft VC_redist.x64
+TestFile = \Microsoft\VC_redist.x64_2015_2022.exe
+Description = %B2Description.Text%
+ErrorText = %B2Error.Text%
+
+[Button3]
+SetupLabel = %B3SetupLabel.Text%
+LabelRectValue = 310*340*504*904
+SetupProgram = \DRC\Swiss Timing - DRC Framework - Quantum.msi**
+SetupWindow = DRC Setup Wizard
+TestFile = \DRC\Swiss Timing - DRC Framework - Quantum.msi
+Description = %B3Description.Text%
+ErrorText = %B3Error.Text%
+
+[Button4]
+SetupLabel = %B4SetupLabel.Text%
+LabelRectValue = 340*370*485*885
+SetupProgram = \SW\QuantumSwimming  6.1.24163.0.msi**
+SetupWindow = QuantumAQ Swimming setup Wizard
+TestFile = \SW\QuantumSwimming  6.1.24163.0.msi
+Description = %B4Description.Text%
+ErrorText = %B4Error.Text%
+
+[Button5]
+SetupLabel = %B5SetupLabel.Text%
+LabelRectValue = 370*400*466*866
+SetupProgram = \SWA\OpenExplorer.cmd
+SetupWindow = QuantumAQ Swimming setup Wizard
+TestFile = \SWA\OpenExplorer.cmd
+Description = %B5Description.Text%
+ErrorText = %B5Error.Text%
+
+[Button6]
+SetupLabel = %B6SetupLabel.Text%
+LabelRectValue = 400*430*447*847
+SetupProgram = \DV\OpenExplorer.cmd
+SetupWindow = QuantumAQ Swimming setup Wizard
+TestFile = \DV\OpenExplorer.cmd
+Description = %B6Description.Text%
+ErrorText = %B6Error.Text%
+
+[Button7]
+SetupLabel = %B7SetupLabel.Text%
+LabelRectValue = 430*460*428*828
+SetupProgram = \Manuals\User_manuals_aquatics_cd.htm
+SetupWindow = QUANTUM User Manuals
+TestFile = \Manuals\User_manuals_aquatics_cd.htm
+Description = %B7Description.Text%
+ErrorText = %B7Error.Text%
+
+[Button8]
+SetupLabel = %B8SetupLabel.Text%
+LabelRectValue = 460*490*409*809
+SetupProgram = \QAQ_USB_UPDATE\FTDI_USB_SETUP\CDM21224_Setup.exe**
+SetupWindow = QUANTUM Drivers
+TestFile = \QAQ_USB_UPDATE\FTDI_USB_SETUP\CDM21224_Setup.exe
+Description = %B8Description.Text%
+ErrorText = %B8Error.Text%
+
+[Button9]
+SetupLabel = %B9SetupLabel.Text%
+LabelRectValue = 490*520*390*790
+SetupProgram = \QAQ_USB_UPDATE\QAQ_USBUpdate.exe**
+SetupWindow = QUANTUM Drivers
+TestFile = \QAQ_USB_UPDATE\QAQ_USBUpdate.exe
+Description = %B9Description.Text%
+ErrorText = %B9Error.Text%
+
+[Button10]
+SetupLabel = %B10SetupLabel.Text%
+LabelRectValue = 520*550*371*771
+Description = %B10Description.Text%
+AlreadyRunningErrorText =
+
+[Bitmaps]
+16Color = setup\bitmap\INTRO256.BMP
+256Color = setup\bitmap\INTRO256.BMP
+
+[Strings]
+QAQTitle.Text = Swiss Timing - Aquatics Software Installation
+
+B0SetupLabel.Text = Installation procedure
+B0Description.Text = Read important information about Quantum softwares installation
+B0Error.Text = The USB key has probably be removed, please insert the USB Key labeled QUANTUM softwares installation.
+
+B1SetupLabel.Text = Microsoft .NET 4.8 Framework
+B1Description.Text = Install the Microsoft .NET 4.8 Framework
+B1Error.Text = This configuration do not include the .NET Framework
+
+B2SetupLabel.Text = Microsoft VC_redist.x64
+B2Description.Text = Install the Microsoft VC_redist.x64
+B2Error.Text = This configuration do not include the Microsoft VC_redist.x64
+
+B3SetupLabel.Text = Install DRC Base libraries 6.1.24060.1 
+B3Description.Text = Launch the SwissTiming DRC installation wizard.
+B3Error.Text = This configuration do not include the DRC package.
+
+B4SetupLabel.Text = Launch QUANTUM SW Application 6.1.24163.0
+B4Description.Text = Launch the installation wizard.  
+B4Error.Text = This configuration do not include the swimming application.
+
+B5SetupLabel.Text = Open folder ARTISTIC SWIMMING
+B5Description.Text = Launch the installation wizard.  
+B5Error.Text = This configuration do not include the synchro swimming application.
+
+B6SetupLabel.Text = Open folder DIVING Application
+B6Description.Text = Launch the installation wizard.  
+B6Error.Text = This configuration do not include the diving application.
+
+B7SetupLabel.Text = Users manuals
+B7Description.Text = Browse the USB Key through Manuals folder
+B7Error.Text = The USB Key has probably be removed, please insert the USB Key labeled QUANTUM softwares installation.
+
+B8SetupLabel.Text = QUANTUM USB Driver 2.12.24
+B8Description.Text = Install the QUANTUM USB Driver
+B8Error.Text = The USB Key has probably be removed, please insert the USB Key labeled QUANTUM softwares installation.
+
+B9SetupLabel.Text = QUANTUM USB Driver Troubleshooting
+B9Description.Text = Only required if the Sports Application cannot connect to the Quantum. Follow instruction from the upgade tool.
+B9Error.Text = The USB Key has probably be removed, please insert the USB Key labeled QUANTUM softwares installation
+
+B10SetupLabel.Text = EXIT
+B10Description.Text = Click here to exit this installation wizard.
+
+
